@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AppStoreTest</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- mensajes de error -->
+    <string name="errorDatos">Actualice nuevamente el inventario</string>
+    <string name="errorConversion">No se logró actualizar la tienda</string>
+    <string name="errorDesconocido">Algo salió mal. Intente actualizar más tarde</string>
+    <string name="errorActualización">El servicio de actualización ha fallado!</string>
+    <string name="errorActualizacion">La lista de aplicaciones no se pudo actualizar</string>
+    <string name="errorConexionInternet">Es necesaria una conexión a Internet</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="actualizando">Actualizando las apps. Espere por favor.</string>
+
+</resources>
