@@ -11,6 +11,7 @@ import com.avellacorp.appstoretest.bussines.ActualizacionStore;
 import com.avellacorp.appstoretest.bussines.DescargaDatos;
 import com.avellacorp.appstoretest.ui.activities.SplashActivity;
 import com.avellacorp.appstoretest.ui.activities.StoreActivity;
+import com.avellacorp.appstoretest.ui.presenter.Navigator;
 
 
 /**
@@ -52,8 +53,9 @@ public class DownloadAppsTask extends AsyncTask<String, Integer, GenericReturn> 
         }
         // lanza actividad principal
 
-        Intent i = new Intent(context, StoreActivity.class);
-        context.startActivity(i);
+        Navigator nav = new Navigator(context);
+        nav.openStoreActivity(null);
+
         ((SplashActivity) context).finish();
 
 

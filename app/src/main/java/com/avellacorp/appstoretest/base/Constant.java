@@ -67,6 +67,24 @@ public final class Constant {
     public static final String APLICACION = "APLICACION";
 
     /**
+     * Códigos constantes para extras de otras actividades
+     */
+    public static final String IMAGEN_EX = "imagen";
+    public static final String NOMBRE_EX = "nombre";
+    public static final String VALOR_EX = "valor";
+    public static final String MONEDA_EX = "moneda";
+    public static final String CATEGORIA_EX = "categoria";
+    public static final String AUTOR_EX = "autor";
+    public static final String DERECHOS_EX = "derechos";
+    public static final String RESUMEN_EX = "resumen";
+    public static final String URL_APP_EX = "urlApp";
+    public static final String URL_AUTOR_EX = "urlAutor";
+    public static final String URL_CATEGORIA_EX = "urlCategoria";
+
+    public static final String ID_CATEGORIA_EX = "idCategoria";
+
+
+    /**
      * Constantes para diálogos
      */
     public static final int PROGRESS_DIALOG = 1;

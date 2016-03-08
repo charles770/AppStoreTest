@@ -8,6 +8,7 @@ import com.avellacorp.appstoretest.entities.Categoria;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Created by Carlosas
@@ -16,12 +17,12 @@ public class CategoriaBussines {
 
     private Context context;
     private DBAdapter dbAdapter;
-    final SimpleDateFormat formatNotice = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssTZD");
+    final SimpleDateFormat formatNotice = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
 
-    public CategoriaBussines(Context activity) {
+    public CategoriaBussines(Context context) {
 
         this.context = context;
-        dbAdapter = dbAdapter = DBManager.getInstance(context);
+        dbAdapter  = DBManager.getInstance(context);
 
     }
 
@@ -31,11 +32,11 @@ public class CategoriaBussines {
      *
      * @return Respuesta
      */
-    public List<Categoria> ConsultarListaCategorias() {
+    public Vector<Categoria> ConsultarListaCategorias() {
 
         //Obtiene una lista
 
-        List<Categoria> listaCats =   dbAdapter.fetchAllCategoria();
+        Vector<Categoria> listaCats =   dbAdapter.fetchAllCategoria();
 
         return listaCats;
     }

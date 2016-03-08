@@ -13,5 +13,8 @@
     <string name="errorConexionInternet">Es necesaria una conexión a Internet</string>
     <string name="aceptar">Aceptar</string>
     <string name="actualizando">Actualizando las apps. Espere por favor.</string>
+    <string name="categorias">Categories</string>
+    <string name="title_activity_categorias">CategoriasActivity</string>
+    <string name="title_activity_aplicacion_dialog">AplicacionDialog</string>
 
 </resources>

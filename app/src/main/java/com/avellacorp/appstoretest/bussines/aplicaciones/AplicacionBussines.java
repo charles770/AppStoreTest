@@ -18,6 +18,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Created by Carlosas
@@ -304,20 +305,20 @@ public class AplicacionBussines {
      *
      * @return Respuesta
      */
-    public List<Aplicacion> ConsultarListaAplicaciones() {
+    public Vector<Aplicacion> ConsultarListaAplicaciones() {
 
         //Obtiene una lista
 
-        List<Aplicacion> listaApps =   dbAdapter.fetchAllAplicacion();
+        Vector<Aplicacion> listaApps =   dbAdapter.fetchAllAplicacion();
 
         return listaApps;
     }
 
-    public List<Aplicacion> ConsultarListaAplicacionesByCategoria(String idCategoria) {
+    public Vector<Aplicacion> ConsultarListaAplicacionesByCategoria(String idCategoria) {
 
         //Obtiene una lista
 
-        List<Aplicacion> listaApps =   dbAdapter.fetchAplicacionByCategory(idCategoria);
+        Vector<Aplicacion> listaApps =   dbAdapter.fetchAplicacionByCategory(idCategoria);
 
         return listaApps;
     }

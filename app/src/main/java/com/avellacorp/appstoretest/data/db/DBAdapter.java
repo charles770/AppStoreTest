@@ -14,6 +14,7 @@ import com.avellacorp.appstoretest.entities.Store;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 
 /**
@@ -323,11 +324,11 @@ public class DBAdapter {
         if (mCursor != null) {
             mCursor.moveToFirst();
         }
-        return cursorToAplicacion(mCursor).size() > 0 ? cursorToAplicacion(mCursor).get(0) : null;
+        return mCursor.getCount() > 0 ? cursorToAplicacion(mCursor).get(0) : null;
 
     }
 
-    public List<Aplicacion> fetchAllAplicacion() {
+    public Vector<Aplicacion> fetchAllAplicacion() {
 
         Cursor mCursor = database.query(DATABASE_APLICACION, new String[]{KEY_ID,
                         KEY_NOMBRE, KEY_RESUMEN, KEY_URL_IMAGEN,
@@ -344,7 +345,7 @@ public class DBAdapter {
 
     }
 
-    public List<Aplicacion> fetchAplicacionByCategory(String idCat) {
+    public Vector<Aplicacion> fetchAplicacionByCategory(String idCat) {
 
         Cursor mCursor = database.query(DATABASE_APLICACION, new String[]{KEY_ID,
                         KEY_NOMBRE, KEY_RESUMEN, KEY_URL_IMAGEN,
@@ -361,11 +362,11 @@ public class DBAdapter {
 
     }
 
-    private List<Aplicacion> cursorToAplicacion(Cursor cursor) {
+    private Vector<Aplicacion> cursorToAplicacion(Cursor cursor) {
 
         //Convierte un cursor de Lista a un objeto de Apliacacion
 
-        List<Aplicacion> apps = new ArrayList<>();
+        Vector<Aplicacion> apps = new Vector<>();
 
         try {
             if (cursor.getCount() > 0) {
@@ -486,11 +487,11 @@ public class DBAdapter {
         if (mCursor != null) {
             mCursor.moveToFirst();
         }
-        return cursorToCategoria(mCursor).size() > 0 ? cursorToCategoria(mCursor).get(0) : null;
+        return mCursor.getCount() > 0 ? cursorToCategoria(mCursor).get(0) : null;
 
     }
 
-    public List<Categoria> fetchAllCategoria() {
+    public Vector<Categoria> fetchAllCategoria() {
 
         Cursor mCursor = database.query(DATABASE_CATEGORIA, new String[]{KEY_ID,
                         KEY_NOMBRE, KEY_URL}, null, null, null,
@@ -503,11 +504,11 @@ public class DBAdapter {
 
     }
 
-    private List<Categoria> cursorToCategoria(Cursor cursor) {
+    private Vector<Categoria> cursorToCategoria(Cursor cursor) {
 
         //Convierte un cursor de Lista a un objeto de Categoria
 
-        List<Categoria> cats = new ArrayList<>();
+        Vector<Categoria> cats = new Vector<>();
 
         try {
             if (cursor.getCount() > 0) {
