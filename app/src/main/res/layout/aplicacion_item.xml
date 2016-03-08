@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        android:background="@color/colorPrimaryDarkLight"
+        android:id="@+id/cv"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            >
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/ivImagen"
+
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNombre"
+                android:layout_toRightOf="@+id/ivImagen"
+                android:layout_alignParentTop="true"
+                android:text="snapchat"
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCategoria"
+                android:text="Games"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toRightOf="@+id/ivImagen"
+                android:layout_below="@+id/txtNombre"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPrecio"
+                android:text="20USD"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toRightOf="@+id/ivImagen"
+                android:layout_below="@+id/txtCategoria"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
